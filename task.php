@@ -16,9 +16,7 @@ if(count($arr)) {
             $end = $v[1];
         } elseif($v[0] > $end) {
             $new_intervals[] = $start.'-'.$end;
-            $start = $v[0];
-            $end = $v[1];
-            
+            list($start,$end) = $v;
         }
     }
     $new_intervals[] = $start.'-'.$end;
